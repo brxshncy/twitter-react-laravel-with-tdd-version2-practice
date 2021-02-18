@@ -1,4 +1,4 @@
-#Twitter Full Stack Application
+## Twitter Full Stack Application
 
 <b>Technology Used:</b> Laravel + React
 
