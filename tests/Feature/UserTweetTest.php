@@ -13,7 +13,7 @@ class UserTweetTest extends TestCase
 {
     use WithFaker;
 
-    public function test_if_user_can_post_tweet()
+    public function test_user_can_post_tweet()
     {
         $this->withoutExceptionHandling();
         Passport::actingAs(
@@ -32,7 +32,7 @@ class UserTweetTest extends TestCase
                 ]);
     }
 
-    public function test_if_user_can_see_tweets_on_feed()
+    public function test_user_can_see_tweets_on_feed()
     {
         $this->withoutExceptionHandling();
 

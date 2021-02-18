@@ -11,7 +11,7 @@ use Laravel\Passport\Passport;
 
 class UserFollowTest extends TestCase
 {
-    public function test_if_user_can_follow()
+    public function test_user_can_follow()
     {
         $this->withoutExceptionHandling();
 
@@ -34,7 +34,7 @@ class UserFollowTest extends TestCase
                 ]);
     }
 
-    public function test_if_user_cannot_follow_the_already_followed_user()
+    public function test_user_cannot_follow_the_already_followed_user()
     {
         $this->withoutExceptionHandling();
 
@@ -55,7 +55,7 @@ class UserFollowTest extends TestCase
                 ]);
     }
 
-    public function test_if_current_logged_in_user_can_view_list_of_users_that_has_not_been_followed()
+    public function test_current_logged_in_user_can_view_list_of_users_that_has_not_been_followed()
     {
 
         $this->withoutExceptionHandling();

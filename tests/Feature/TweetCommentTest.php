@@ -16,7 +16,7 @@ class TweetCommentTest extends TestCase
 
     use WithFaker;
 
-    public function test_if_user_can_comment_tweet()
+    public function test_user_can_comment_tweet()
     {
             $this->withoutExceptionHandling();
 
@@ -45,7 +45,7 @@ class TweetCommentTest extends TestCase
 
     }
 
-    public function test_if_user_can_view_comment_count()
+    public function test_user_can_view_comment_count()
     {
         $this->withoutExceptionHandling();
 
@@ -64,7 +64,7 @@ class TweetCommentTest extends TestCase
 
     }
 
-        public function test_if_user_can_view_comment_count_on_specific_tweet()
+        public function test_user_can_view_comment_count_on_specific_tweet()
         {
             $this->withoutExceptionHandling();
 
