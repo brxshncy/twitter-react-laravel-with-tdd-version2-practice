@@ -43,6 +43,11 @@ Route::get('test', function (){
  
 });
 
-Route::get('/', function () {
-    return 'test';
-});
+Route::redirect('/', '/home');
+
+
+Route::get('/{any}', function (){
+    
+    return view('welcome');
+
+})->where('any', '.*');
