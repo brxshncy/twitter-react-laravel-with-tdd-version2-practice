@@ -40,4 +40,4 @@ Route::group(['middleware' => ['auth:api']], function (){
 
 
 Route::post('register', [UserController::class, 'store'])->name('register');
-Route::post('logn', LoginControler::class)->name('login');
+Route::post('login', LoginControler::class)->name('login');
