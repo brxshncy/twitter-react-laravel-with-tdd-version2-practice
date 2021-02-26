@@ -20,6 +20,17 @@ let systemUrl = window.location.origin;
             dispatch( { type: 'ERROR_LOGIN',
                         payload:error.response.data } )
         })
-      }  
+      }  ,
 
- }
+      register: (url, dispatch, data) => {
+         axios.post(`${systemUrl}/${url}`, data)
+         .then(res => {
+            dispatch({type:'SIGN_UP', payload:res})
+         })
+         .catch(err => {
+           dispatch({  type:'ERROR_LOGIN',
+                      payload: error.response.data } )
+         })
+      }
+
+ }  

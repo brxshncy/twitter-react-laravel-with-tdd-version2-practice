@@ -18,24 +18,27 @@ const Login = () => {
 
         authAction.login('api/login', dispatch, loginData)
 
-        // dispatch( { type:'LOG_IN', payload: loginData } )
-
+    
     }
-    console.log(data)
+    console.log(data.error.message)
     return(
-       <form onSubmit={handleLogin}>
+        <>
+            <form onSubmit={handleLogin}>
 
-           <input type="text" 
-                onChange={ e => setLoginData({...loginData, email: e.target.value})}
-                value={loginData.email} />
+                <input type="text" 
+                        onChange={ e => setLoginData({...loginData, email: e.target.value})}
+                        value={loginData.email} />
 
-            <input type="text" 
-                    onChange={e => setLoginData({...loginData, password: e.target.value})}
-                    value= {loginData.password} />
-                  
-            <button type="submit">Login</button>
-               
-       </form>
+                    <input type="text" 
+                            onChange={e => setLoginData({...loginData, password: e.target.value})}
+                            value= {loginData.password} />
+                        
+                    <button type="submit">Login</button>
+                    
+            </form>
+            { data.error.message }
+       </>
+
     )
 }
 
